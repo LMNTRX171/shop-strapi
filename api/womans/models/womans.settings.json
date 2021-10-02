@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "womans",
+  "info": {
+    "name": "womans",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "price": {
+      "type": "integer"
+    },
+    "prive": {
+      "type": "integer"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "women",
+      "dominant": true
+    },
+    "count": {
+      "type": "integer"
+    }
+  }
+}
